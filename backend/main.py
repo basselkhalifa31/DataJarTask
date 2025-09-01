@@ -84,7 +84,7 @@ async def chat(message: str = Form(...)):
             buffer += token
             yield token
 
-        # Save assistant reply after streaming ends
+        # Save assistant reply after streaming endss
         with SessionLocal() as db:
             db.add(ChatHistory(role="assistant", content=buffer))
             db.commit()
